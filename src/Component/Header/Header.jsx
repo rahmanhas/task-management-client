@@ -9,7 +9,7 @@ const NavMenu = <>
     <li><NavLink to={`/alltasks`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>All Tasks</NavLink></li>
     <li><NavLink to={`/mytoys`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>My Toys</NavLink></li>
     <li><NavLink to={`/addtask`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Add Task</NavLink></li>
-    <li><NavLink to={`/blog`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Blog</NavLink></li>
+    <li><NavLink to={`/dashboard`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Dashboard</NavLink></li>
 </>
 const Header = () => {
     const { user, logOut, setError } = useContext(AuthContext);

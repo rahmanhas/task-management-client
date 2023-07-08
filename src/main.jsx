@@ -13,6 +13,7 @@ import LogIn from './Pages/Login/LogIn';
 import AddTask from './Pages/AddTask/AddTask';
 import AllTasks from './Pages/AllTasks/AllTasks';
 import TaskDetails from './Pages/TaskDetails';
+import MAinDashboard from './Pages/Dashboard/MAinDashboard';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: '/addtask', element: <AddTask></AddTask> },
       { path: '/alltasks', element: <AllTasks></AllTasks> },
       { path: '/task/:id', element: <TaskDetails></TaskDetails> },
+      { path: '/dashboard', element: <MAinDashboard></MAinDashboard> },
     ]
   },
 ]);
