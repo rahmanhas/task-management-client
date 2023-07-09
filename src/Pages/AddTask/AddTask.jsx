@@ -13,7 +13,7 @@ const AddTask = () => {
     const [allUsers, setAllUsers] = useState([])
 
     useEffect(()=>{
-        fetch("http://localhost:3000/allusers")
+        fetch(`${import.meta.env.VITE_SERVER_URL}/allusers`)
         .then(res=>res.json())
         .then(data=>setAllUsers(data))
     },[])
@@ -28,7 +28,7 @@ const AddTask = () => {
         const price = form.price.value;
         const task = {title, description, dueDate, status, assignedUser, price};
         console.log(task);
-        fetch("http://localhost:3000/tasks", {
+        fetch(`${import.meta.env.VITE_SERVER_URL}/tasks`, {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
@@ -58,13 +58,13 @@ const AddTask = () => {
                         <label className="label">
                             <span className="label-text">Title</span>
                         </label>
-                        <input type="text" name="title" placeholder="Title" className="input input-bordered" />
+                        <input type="text" name="title" placeholder="Title" className="input input-bordered" required/>
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Description</span>
                         </label>
-                        <input type="text" name="description" placeholder="Description" className="input input-bordered" />
+                        <input type="text" name="description" placeholder="Description" className="input input-bordered" required/>
                     </div>
                 </div>
                 <div className='grid lg:grid-cols-2 gap-4 p-5'>
@@ -72,7 +72,7 @@ const AddTask = () => {
                         <label className="label">
                             <span className="label-text">Due Date</span>
                         </label>
-                        <input type="date" name="dueDate" placeholder="Due Date" className="input input-bordered" />
+                        <input type="date" name="dueDate" placeholder="Due Date" className="input input-bordered" required/>
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -103,7 +103,7 @@ const AddTask = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="number" name="price" placeholder="Price" className="input input-bordered" />
+                        <input type="number" name="price" placeholder="Price" className="input input-bordered" required/>
                     </div>
 
                 </div>

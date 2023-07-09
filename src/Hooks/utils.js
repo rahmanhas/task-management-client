@@ -5,7 +5,7 @@ export const saveUser = user => {
   }
 
   console.log(currentUser);
-  fetch(`http://localhost:3000/users/${user?.email}`, {
+  fetch(`${import.meta.env.VITE_SERVER_URL}/users/${user?.email}`, {
     method: 'PUT',
     headers: {
       'content-type': 'application/json',

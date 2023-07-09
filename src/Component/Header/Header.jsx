@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import logo from "../../../public/vite.svg"
+import logo from "/vite.svg"
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 const NavMenu = <>
     <li><NavLink to={`/`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Home</NavLink></li>
-    <li><NavLink to={`/alltasks`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>All Tasks</NavLink></li>
-    <li><NavLink to={`/mytoys`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>My Toys</NavLink></li>
+    
+    <li><NavLink to={`/mytasks`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>My Tasks</NavLink></li>
     <li><NavLink to={`/addtask`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Add Task</NavLink></li>
     <li><NavLink to={`/dashboard`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Dashboard</NavLink></li>
 </>
@@ -34,7 +34,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <img className='h-[60px]' src={logo} alt="" />
-                <h1 className='font-bold ml-2 text-xl'>Action <br /> House</h1>
+                <h1 className='font-bold ml-2 text-xl'>Task <br /> Management</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

@@ -14,6 +14,7 @@ import AddTask from './Pages/AddTask/AddTask';
 import AllTasks from './Pages/AllTasks/AllTasks';
 import TaskDetails from './Pages/TaskDetails';
 import MAinDashboard from './Pages/Dashboard/MAinDashboard';
+import MyTasks from './Pages/My Task/MyTask';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: '/register', element: <Register></Register> },
       { path: '/addtask', element: <AddTask></AddTask> },
       { path: '/alltasks', element: <AllTasks></AllTasks> },
+      { path: '/mytasks', element: <MyTasks></MyTasks> },
       { path: '/task/:id', element: <TaskDetails></TaskDetails> },
       { path: '/dashboard', element: <MAinDashboard></MAinDashboard> },
     ]

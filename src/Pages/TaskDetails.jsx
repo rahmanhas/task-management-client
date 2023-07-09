@@ -6,7 +6,7 @@ const TaskDetails = () => {
     
     const [tasks, setTasks] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:3000/tasks/${id}`)
+        fetch(`${import.meta.env.VITE_SERVER_URL}/tasks/${id}`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [])
