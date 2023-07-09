@@ -5,11 +5,11 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 const NavMenu = <>
-    <li><NavLink to={`/`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Home</NavLink></li>
+    <li><NavLink to={`/`} className={({ isActive }) => isActive ? "bg-green-500 text-lg text-black mr-2 p-2" : ""}>Home</NavLink></li>
     
-    <li><NavLink to={`/mytasks`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>My Tasks</NavLink></li>
-    <li><NavLink to={`/addtask`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Add Task</NavLink></li>
-    <li><NavLink to={`/dashboard`} className={({ isActive }) => isActive ? "bg-blue-500 text-lg text-black mr-2 p-2" : ""}>Dashboard</NavLink></li>
+    <li><NavLink to={`/mytasks`} className={({ isActive }) => isActive ? "bg-green-500 text-lg text-black mr-2 p-2" : ""}>My Tasks</NavLink></li>
+    <li><NavLink to={`/addtask`} className={({ isActive }) => isActive ? "bg-green-500 text-lg text-black mr-2 p-2" : ""}>Add Task</NavLink></li>
+    <li><NavLink to={`/dashboard`} className={({ isActive }) => isActive ? "bg-green-500 text-lg text-black mr-2 p-2" : ""}>Dashboard</NavLink></li>
 </>
 const Header = () => {
     const { user, logOut, setError } = useContext(AuthContext);
@@ -23,7 +23,7 @@ const Header = () => {
             .catch(error => setError(error.message))
     }
     return (
-        <div className="navbar bg-blue-200">
+        <div className="navbar bg-green-400">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,13 +46,13 @@ const Header = () => {
                     user ?
                         <>
                             <div className="avatar">
-                                <div className="w-12 rounded-full border-blue-500 border-2 mr-3">
+                                <div className="w-12 rounded-full border-green-500 border-2 mr-3">
                                     <img src={user.photoURL} title={user.displayName} />
                                 </div>
                             </div>
-                            <button className='btn btn-primary bg-blue-500 hover:bg-blue-800 border-0 text-black' onClick={handleLogOut}>Log Out</button>
+                            <button className='btn btn-primary bg-green-500 hover:bg-green-800 border-0 text-black' onClick={handleLogOut}>Log Out</button>
                         </> :
-                        <Link className='btn btn-primary bg-blue-500 hover:bg-blue-800 border-0 text-black' to="/login">Log in</Link>
+                        <Link className='btn btn-primary bg-green-500 hover:bg-green-800 border-0 text-black' to="/login">Log in</Link>
                 }
             </div>
         </div>

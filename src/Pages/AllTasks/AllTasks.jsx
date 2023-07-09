@@ -71,8 +71,7 @@ const AllTasks = () => {
     };
 
     const handleUpdateTask = (event) => {
-        event.preventDefault();
-        // ... existing code ...
+        event.preventDefault()
         const form = event.target;
         const id = form.id.value;
         const title = form.title.value;
@@ -104,9 +103,8 @@ const AllTasks = () => {
                 }
             })
             .catch(error => console.log(error.message))
-
         window.my_modal_3.close();
-    };
+    }
 
     const handleSort = () => {
         const sortedTasks = [...filteredTasks];
@@ -217,7 +215,6 @@ const AllTasks = () => {
                                 </button>
                             </td>
                             <dialog id="my_modal_3" className="modal">
-                                {/* ... existing code ... */}
                                 <form onSubmit={handleUpdateTask} method="dialog" className="modal-box">
                                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => window.my_modal_3.close()}>✕</button>
                                     <div className='grid lg:grid-cols-2 gap-4 p-5'>

@@ -3,7 +3,7 @@ import logo from "/vite.svg"
 
 const Footer = () => {
     return (
-        <div className='bg-blue-300'>
+        <div className='bg-green-300'>
             <footer className="footer footer-center p-10  text-base-content flex flex-col lg:flex-row lg:justify-around justify-center items-center">
                 <div className='flex flex-col justify-center lg:justify-start items-start'>
                     <p className="font-bold inline-flex justify-center items-center">

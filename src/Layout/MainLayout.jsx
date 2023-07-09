@@ -14,7 +14,7 @@ const MainLayout = () => {
     return (
         <div>
             <Header></Header>
-            <div>
+            <div className='min-h-[100vh]'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
